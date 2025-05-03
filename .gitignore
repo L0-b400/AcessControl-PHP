@@ -1,0 +1,12 @@
+# Arquivo de ambiente - NUNCA versionar!
+.env
+
+# Pasta do Composer (pode ser recriada com composer install)
+vendor/
+
+# Arquivos de log
+*.log
+
+# Cache do sistema
+.cache/
+tmp/
