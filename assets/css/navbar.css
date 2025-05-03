@@ -1,0 +1,10 @@
+body { margin: 0; font-family: sans-serif; }
+.navbar {
+  background: #333; color: #fff;
+  padding: 10px 20px;
+  display: flex; align-items: center;
+  justify-content: space-between;
+}
+.navbar a { color: #fff; text-decoration: none; margin-right: 15px; }
+.navbar .user-info { font-size: 0.9rem; }
+.container { padding: 20px; }
