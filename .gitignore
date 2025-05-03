@@ -1,12 +1,17 @@
-# Arquivo de ambiente - NUNCA versionar!
+# Arquivos sensíveis
 .env
 
-# Pasta do Composer (pode ser recriada com composer install)
-vendor/
+# Pasta gerada pelo Composer
+/vendor/
 
 # Arquivos de log
 *.log
 
-# Cache do sistema
+# Caches e temporários
 .cache/
-tmp/
+*.tmp
+*.swp
+
+# Diretórios do sistema
+.DS_Store
+Thumbs.db
