@@ -1,5 +1,10 @@
 <?php
+session_start();
 require '../process/processRegister.php';
+require '../process/validate.php';
+if ($tipo !== 'admin') {
+  header('Location: ../dashboard.php?erro=AcessoRestrito');
+  exit;}
 ?>
 
 <!DOCTYPE html>
