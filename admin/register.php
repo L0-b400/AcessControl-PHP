@@ -3,7 +3,7 @@ session_start();
 require '../process/processRegister.php';
 require '../process/validate.php';
 if ($tipo !== 'admin') {
-  header('Location: ../dashboard.php?erro=AcessoRestrito');
+  header('Location: ../public/dashboard.php?erro=AcessoRestrito');
   exit;}
 ?>
 
@@ -11,21 +11,12 @@ if ($tipo !== 'admin') {
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Cadastro de Usuário (Admin)</title>
-
-  <style>
-    body { font-family: sans-serif; background:#f5f5f5; }
-    .container { 
-      width: 400px; margin: 50px auto; padding:20px;
-      background:#fff; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);
-    }
-    input, select, button { width:100%; padding:10px; margin:8px 0; }
-    button { cursor:pointer; }
-    .msg { color:red; margin:10px 0; }
-  </style>
-  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+  <title>Cadastro de Usuário (Admin)</title>  
 </head>
 <body>
+  <?php include "../assets/navbar.php"; ?> 
   <div class="container">
     <h2>Cadastro de Usuário (Admin)</h2>
     <?php if ($mensagem): ?>

@@ -1,11 +1,13 @@
 <?php
-require_once 'config/db.php';
+    require_once 'config/db.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.css">
+
     <title>Login</title>
 </head>
 <body>
