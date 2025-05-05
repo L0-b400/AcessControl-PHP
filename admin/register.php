@@ -2,9 +2,10 @@
 session_start();
 require '../process/processRegister.php';
 require '../process/validate.php';
-if ($tipo !== 'admin') {
+if (!isset($_SESSION['usuario_tipo']) || $_SESSION['usuario_tipo'] !== 'admin') {
   header('Location: ../public/dashboard.php?erro=AcessoRestrito');
-  exit;}
+  exit;
+}
 ?>
 
 <!DOCTYPE html>

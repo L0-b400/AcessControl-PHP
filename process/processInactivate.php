@@ -1,8 +1,10 @@
 <?php
+session_start();
 require '../config/db.php';
-if ($tipo !== 'admin') {
-  header('Location: ../public/dashboard.php?erro=AcessoRestrito');
-  exit;}
+if (!isset($_SESSION['usuario_tipo']) || $_SESSION['usuario_tipo'] !== 'admin') {
+    header('Location: ../public/dashboard.php?erro=AcessoRestritoaaaaa');
+    exit;
+}
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

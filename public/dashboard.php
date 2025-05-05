@@ -8,7 +8,6 @@ $alertas = [
     'sucesso' => 'Operação realizada com sucesso.',
     'erro' => 'Erro na operação.'
 ];
-$mensagem = $alertas[$msg] ?? '';
 
 try {
     $stmt = $pdo->prepare("SELECT id, nome, email, telefone, tipo, status, criado_em, atualizado_em FROM usuarios");

@@ -1,6 +1,4 @@
 <?php
-
-// Verifica se está logado
 if (!isset($_SESSION['usuario_id'])) {
     header('Location: /p01/login.php');
     exit;
