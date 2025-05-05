@@ -23,7 +23,21 @@ if (isset($_GET['id'])) {
     exit;
 }
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+</head>
+<body>
+    <header>
+        <?php include "../assets/navbar.php";?>
+    </header>
+    <h1 style="text-align: center;">UPDATE</h1>
+<div class="container">
 <form action="../process/processUpdate.php" method="POST">
 <input type="hidden" name="id" value="<?= $user['id'] ?>">
 
@@ -61,3 +75,6 @@ if (isset($_GET['id'])) {
 
     <button type="submit">Atualizar</button>
 </form>
+</div>
+</body>
+</html>

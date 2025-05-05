@@ -2,7 +2,7 @@
 session_start();
 require '../config/db.php';
 if (!isset($_SESSION['usuario_tipo']) || $_SESSION['usuario_tipo'] !== 'admin') {
-    header('Location: ../public/dashboard.php?erro=AcessoRestritoaaaaa');
+    header('Location: ../public/dashboard.php?erro=AcessoRestrito');
     exit;
 }
 
@@ -15,11 +15,11 @@ if (isset($_GET['id'])) {
     $user = $stmt->fetch();
 
     if (!$user) {
-        header("Location: dashboard.php?msg=Usuário não encontrado.");
+        header("Location: ../public/dashboard.php??msg=Usuário não encontrado.");
         exit;
     }
     if ($user['status'] === 'inativo') {
-        header("Location: dashboard.php?msg=Usuário já está inativo.");
+        header("Location: ../public/dashboard.php?msg=Usuário já está inativo.");
         exit;
     }
 
