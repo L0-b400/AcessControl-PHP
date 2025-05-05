@@ -5,22 +5,22 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-function getDbConfig(string $env): array {
-    if ($env === 'prod') {
+    function getDbConfig(string $env): array {
+        if (strtolower($env) === 'prod') {
+            return [
+                'host' => $_ENV['DB_HOST_PROD'] ?? 'localhost',
+                'user' => $_ENV['DB_USER_PROD'] ?? 'root',
+                'pass' => $_ENV['DB_PASS_PROD'] ?? '',
+                'db'   => $_ENV['DB_NAME_PROD'] ?? 'meubanco',
+            ];
+        }
         return [
-            'host' => $_ENV['DB_HOST_PROD'] ?? 'localhost',
-            'user' => $_ENV['DB_USER_PROD'] ?? 'root',
-            'pass' => $_ENV['DB_PASS_PROD'] ?? '',
-            'db'   => $_ENV['DB_NAME_PROD'] ?? 'meubanco',
+            'host' => $_ENV['DB_HOST'] ?? 'localhost',
+            'user' => $_ENV['DB_USER'] ?? 'root',
+            'pass' => $_ENV['DB_PASS'] ?? '',
+            'db'   => $_ENV['DB_NAME'] ?? 'meubanco',
         ];
     }
-    return [
-        'host' => $_ENV['DB_HOST'] ?? 'localhost',
-        'user' => $_ENV['DB_USER'] ?? 'root',
-        'pass' => $_ENV['DB_PASS'] ?? '',
-        'db'   => $_ENV['DB_NAME'] ?? 'meubanco',
-    ];
-}
 $appEnv = $_ENV['APP_ENV'] ?? 'dev';
 $dbConfig = getDbConfig($appEnv);
 
