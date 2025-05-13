@@ -149,7 +149,7 @@ INTERFACE / USABILIDADE - UI/UX
 
 
 Instalação
-1- git clone https://github.com/seu-usuario/seu-projeto.git
+1- git clone https://github.com/L0-b400/AcessControl-PHP.git
 2- composer install
 3- Crie o arquivo .env com base no modelo abaixo (arquivo separado por "()" somente para exemplificar):
  .env:(
