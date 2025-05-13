@@ -153,9 +153,9 @@ Instalação
 
 2- composer install
 
-3- Crie o arquivo .env com base no modelo abaixo (arquivo separado por "()" somente para exemplificar):
+3- Crie o arquivo .env com base no modelo abaixo:
 
- .env:(
+ .env:
     
     APP_ENV=dev
     DB_HOST=000.0.0.0
@@ -168,5 +168,6 @@ Instalação
     DB_USER_PROD=seu_usuario_prod
     DB_PASS_PROD=sua_senha_prod
     DB_NAME_PROD=seu_banco_prod
-  )
+  
+  
 4- Configure o banco de dados e importe o sec_users.sql
