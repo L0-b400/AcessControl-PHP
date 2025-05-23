@@ -1,5 +1,6 @@
 <?php
 require '../config/db.php';
+require '/validate.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['id'], $_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['tipo'], $_POST['status'])) {
